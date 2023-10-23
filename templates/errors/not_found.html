@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Basic -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+      <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.png')}}" type="">
+      <title>Page Not Found</title>
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}" />
+      <!-- font awesome style -->
+      <link href="{{url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" />
+      <!-- Custom styles for this template -->
+      <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+      <!-- responsive style -->
+      <link href="{{url_for('static', filename='css/responsive.css')}}" rel="stylesheet" />
+   </head>
+   <body>
+        <section class="layout_padding">
+            <div class="heading_container heading_center">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <img class="mb-3" src="{{url_for('static', filename='images/error_404.png')}}">
+                        <h2 class="m-3 text-secondary">Page Not Found, Looks like you are <span>lost !</span></h2>
+                        <a href="{{url_for('home')}}" class="btn btn-lg btn-outline-danger m-3">
+                            GO Home
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+      <!-- jQery -->
+      <script src="{{url_for('static', filename='js/jquery-3.4.1.min.js')}}"></script>
+      <!-- popper js -->
+      <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+      <!-- bootstrap js -->
+      <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+      <!-- custom js -->
+      <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+   </body>
+</html>

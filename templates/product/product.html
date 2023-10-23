@@ -1,0 +1,57 @@
+{% extends 'layouts/index.html' %}
+{% import 'macros.html' as footer%}
+
+{% block title %}
+<title>{{product.name}}</title>
+{% endblock%}
+
+{% block home %} nav-item {% endblock%}
+
+{% block body %}
+<!-- arrival section -->
+      <section class="arrival_section">
+         <div class="container">
+            <div class="box">
+               <div class="row">
+                  <div class="">
+                  <img src="{{url_for('static', filename='images/'+product.image)}}" alt="">
+               </div>
+                  <div class="col-md-6 ml-auto">
+                     {% if product.instock == True %}
+                     <span class="badge" >In stock</span>
+                     {% else %}
+                     <span class="badge bg-danger p-1">Out of stock </span>
+                     {% endif %}
+                     <div class="heading_container remove_line_bt mt-2">
+                        <h2>
+                           {{product.name}}
+                        </h2>
+                     </div>
+                     <p style="margin-top: 20px;margin-bottom: 30px;">
+                        {{product.desc}}
+                     </p>
+                     <h5 style="margin-bottom: 20px;">
+                        ${{product.price}}
+                     </h5>
+                     <a class="mr-2" href="{{url_for('update',id=product.id)}}">
+                     Update
+                     </a>
+                     <a href="{{url_for('delete',id=product.id)}}">
+                     Delete
+                     </a>
+                     {% if product.modified %}
+                     <p>
+                        {{product.modified}}
+                     </p>
+                     {% endif %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end arrival section -->
+{% endblock%}
+
+{% block footer %}
+{{footer.footer()}}
+{% endblock%}
